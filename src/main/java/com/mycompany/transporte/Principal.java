@@ -14,5 +14,18 @@ public class Principal {
      
       Bicicleta bici= new Bicicleta();
       bici.imprimirBicicleta();
+      
+      Carro carro =new Carro();
+      carro.imprimirCarro();
+      
+      Jet jet =new Jet();
+      jet.imprimirJet();
+      
+      Patineta pati = new Patineta();
+      pati.imprimirPatineta();
+      
+      
+      
+      
     }
 }

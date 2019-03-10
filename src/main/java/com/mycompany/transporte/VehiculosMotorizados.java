@@ -5,6 +5,8 @@
  */
 package com.mycompany.transporte;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Yesid Avila
@@ -18,7 +20,25 @@ public abstract class VehiculosMotorizados extends Vehiculo{
         super(marca, modelo);
           this.combustible = combustible;
     }
+     public VehiculosMotorizados(){
+    
+    }
+      public void imprimirVehiculoMotorizados(){
+        Inicio ini = new Inicio();
+        ArrayList<Vehiculo> ListaVehiculo = ini.traerVehiculo();
+        System.out.println("Lista de Vehiculos Motorizados.");
+        for (Vehiculo listaVehiculos : ListaVehiculo) {
+            if (listaVehiculos instanceof Jet) {
+                Jet x;
+                x = ((Jet) listaVehiculos);
+                System.out.println("Modelo: " + x.getModelo() + " Marca: " + x.getMarca() + " Motores: " + x.getMotores());
+            }else if (listaVehiculos instanceof Carro){
+                Carro x;
+                x = ((Carro) listaVehiculos);
+                System.out.println("Modelo: " + x.getModelo() + " Marca: " + x.getMarca() + " Tamaño: " + x.getTamaño());
+            }
+        }
 }
-
+}
     
 

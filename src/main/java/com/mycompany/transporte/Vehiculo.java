@@ -5,6 +5,8 @@
  */
 package com.mycompany.transporte;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Yesid Avila
@@ -39,9 +41,29 @@ public abstract class Vehiculo implements ITransporte{
     }
     
     public void imprimirVehiculo(){
-    }
+        Inicio ini = new Inicio();
+        ArrayList<Vehiculo> ListaVehiculo = ini.traerVehiculo();
+        System.out.println("Lista de Vehiculos.");
+        for (Vehiculo listaVehiculos : ListaVehiculo) {
+            if (listaVehiculos instanceof Jet) {
+                Jet x;
+                x = ((Jet) listaVehiculos);
+                System.out.println("Modelo: " + x.getModelo() + " Marca: " + x.getMarca() + " Motores: " + x.getMotores());
+            }else if (listaVehiculos instanceof Carro){
+                Carro x;
+                x = ((Carro) listaVehiculos);
+                System.out.println("Modelo: " + x.getModelo() + " Marca: " + x.getMarca() + " Tamaño: " + x.getTamaño());
+            }else if(listaVehiculos instanceof Bicicleta){
+                Bicicleta x;
+                x = ((Bicicleta) listaVehiculos);
+                System.out.println("Modelo: " + x.getModelo() + " Marca: " + x.getMarca() + " Engranaje: " + x.getEngranaje());
+            }else if(listaVehiculos instanceof Patineta){
+                Patineta x;
+                x = ((Patineta) listaVehiculos);
+                System.out.println("Modelo: " + x.getModelo() + " Marca: " + x.getMarca() + " Longitud: " + x.getLongitud());
+
+             }
+        }
+        }
     
-    
-    
-    
-}
+     }

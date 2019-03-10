@@ -38,8 +38,8 @@ public class Bicicleta extends Vehiculo{
     public void imprimirBicicleta(){
         
        Inicio ini = new Inicio();
-    ArrayList<Vehiculo>ListaVehiculo = ini.traerVehiculo();
-    
+       ArrayList<Vehiculo>ListaVehiculo = ini.traerVehiculo();
+       System.out.println("Lista de Bicicletas.");
       
         for (Vehiculo listaBicicleta : ListaVehiculo) {
             if(listaBicicleta instanceof Bicicleta  ){
