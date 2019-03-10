@@ -23,13 +23,13 @@ public class Inicio {
           
           Carro carro1= new Carro("Mazda",1990 , "Gasolina", 5);
           Carro carro2 = new Carro("Renault", 2013, "Gas", 7);
-          Carro carro3 = new Carro("BMW", 2018, "Electrico", 2);
+          Carro carro3 = new Carro("BMW", 1999, "Electrico", 2);
           
-          Jet jet1 = new Jet("Airbus", 2000,"Gasolina",2);
+          Jet jet1 = new Jet("Airbus", 1999,"Gasolina",2);
           Jet jet2 = new Jet("Bombardier", 2008,"Gasolina",1);
           Jet jet3 = new Jet("Cessna", 2015,"Gasolina",3);
           
-          Patineta tabla1 = new Patineta("Planb", 2000, 60);
+          Patineta tabla1 = new Patineta("Planb", 2001, 60);
           Patineta tabla2 = new Patineta("Zero", 2015, 58);
           Patineta tabla3 = new Patineta("One", 2014, 62);
           

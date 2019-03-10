@@ -20,12 +20,25 @@ public class Principal {
       
       Jet jet =new Jet();
       jet.imprimirJet();
-      
+           
       Patineta pati = new Patineta();
       pati.imprimirPatineta();
       
+      carro.imprimirVehiculo();
+      carro.imprimirVehiculoMotorizados();
       
+      bici.buscarModeloAntiguo();
+      bici.buscarModeloNuevo();
       
+      carro.buscarModeloAntiguo();
+      carro.buscarModeloNuevo();
       
+      jet.buscarModeloAntiguo();
+      jet.buscarModeloNuevo();
+      
+      pati.buscarModeloAntiguo();
+      pati.buscarModeloNuevo();
+      
+
     }
 }

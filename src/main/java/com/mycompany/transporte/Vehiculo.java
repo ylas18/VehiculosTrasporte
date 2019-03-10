@@ -64,6 +64,7 @@ public abstract class Vehiculo implements ITransporte{
 
              }
         }
-        }
+    }
+
     
-     }
+}

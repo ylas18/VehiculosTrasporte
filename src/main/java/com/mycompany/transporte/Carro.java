@@ -12,13 +12,14 @@ import java.util.ArrayList;
  * @author Yesid Avila
  */
 public class Carro extends VehiculosMotorizados {
+
     private int tamaño;
 
-    public Carro(String marca, int modelo, String combustible,int tamaño) {
+    public Carro(String marca, int modelo, String combustible, int tamaño) {
         super(marca, modelo, combustible);
-        this.tamaño=tamaño;
+        this.tamaño = tamaño;
     }
-    
+
     public Carro() {
         super();
         tamaño = 0;
@@ -41,11 +42,42 @@ public class Carro extends VehiculosMotorizados {
             if (listaCarro instanceof Carro) {
                 Carro x;
                 x = ((Carro) listaCarro);
-                System.out.println("Modelo: " + x.getModelo() + " Marca: " + x.getMarca() + " Tamaño: " + x.getTamaño());
+                System.out.println("Marca: " + x.getMarca() + " Modelo: " + x.getModelo() + " Capacidad: " + x.getTamaño());
 
             }
         }
 
     }
-    
+
+    @Override
+    public void buscarModeloNuevo() {
+        Inicio ini = new Inicio();
+        ArrayList<Vehiculo> ListaVehiculo = ini.traerVehiculo();
+        for (Vehiculo listaCarros : ListaVehiculo) {
+            if (listaCarros instanceof Carro) {
+                Carro x;
+                x = ((Carro) listaCarros);
+                if (x.getModelo() > 2000) {
+                    System.out.println("Carros mas nuevos: " + "Marca: " + x.getMarca() + " Modelo: " + x.getModelo() + " Capacidad: " + x.getTamaño());
+                }
+            }
+        }
+    }
+
+    @Override
+    public void buscarModeloAntiguo() {
+        Inicio ini = new Inicio();
+        ArrayList<Vehiculo> ListaVehiculo = ini.traerVehiculo();
+        for (Vehiculo listaCarros : ListaVehiculo) {
+            if (listaCarros instanceof Carro) {
+                Carro x;
+                x = ((Carro) listaCarros);
+                if (x.getModelo() <= 2000) {
+                    System.out.println("Carro mas Antiguo: "+"Marca: " + x.getMarca() + " Modelo: " + x.getModelo() + " Capacidad: " + x.getTamaño());
+                }
+            }
+        }
+    }
 }
+
+

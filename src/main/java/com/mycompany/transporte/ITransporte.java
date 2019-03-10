@@ -11,8 +11,7 @@ package com.mycompany.transporte;
  */
 public interface ITransporte {
     
-   // public void imprimirTransporte(){
-        
-    //}
+    public void buscarModeloNuevo();
+    public void buscarModeloAntiguo();
     
 }

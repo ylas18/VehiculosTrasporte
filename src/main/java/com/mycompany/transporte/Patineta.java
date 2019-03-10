@@ -12,16 +12,17 @@ import java.util.ArrayList;
  * @author Yesid Avila
  */
 public class Patineta extends Vehiculo {
+
     private int longitud;
 
     public Patineta(String marca, int modelo, int longitud) {
         super(marca, modelo);
-        this.longitud=longitud;
+        this.longitud = longitud;
     }
-    
+
     public Patineta() {
-      super();
-      longitud = 0;
+        super();
+        longitud = 0;
     }
 
     public int getLongitud() {
@@ -31,8 +32,8 @@ public class Patineta extends Vehiculo {
     public void setLongitud(int longitud) {
         this.longitud = longitud;
     }
-    
-     public void imprimirPatineta() {
+
+    public void imprimirPatineta() {
 
         Inicio ini = new Inicio();
         ArrayList<Vehiculo> ListaVehiculo = ini.traerVehiculo();
@@ -41,12 +42,42 @@ public class Patineta extends Vehiculo {
             if (listaPatinetas instanceof Patineta) {
                 Patineta x;
                 x = ((Patineta) listaPatinetas);
-                System.out.println("Modelo: " + x.getModelo() + " Marca: " + x.getMarca() + " Longitud: " + x.getLongitud());
+                System.out.println("Marca: " + x.getMarca() + " Modelo: " + x.getModelo() + " Longitud: " + x.getLongitud());
 
             }
         }
 
     }
+
+    @Override
+    public void buscarModeloNuevo() {
+        Inicio ini = new Inicio();
+        ArrayList<Vehiculo> ListaVehiculo = ini.traerVehiculo();
+        for (Vehiculo listaPatinetas : ListaVehiculo) {
+            if (listaPatinetas instanceof Patineta) {
+                Patineta x;
+                x = ((Patineta) listaPatinetas);
+                if (x.getModelo() > 2000) {
+                    System.out.println("Patineta mas Nueva: "+"Marca: " + x.getMarca() + " Modelo: " + x.getModelo() + " Longitud: " + x.getLongitud());
+                } 
+            }
+        }
+    }
     
-    
+    @Override
+    public void buscarModeloAntiguo() {
+        Inicio ini = new Inicio();
+        ArrayList<Vehiculo> ListaVehiculo = ini.traerVehiculo();
+        for (Vehiculo listaPatinetas : ListaVehiculo) {
+            if (listaPatinetas instanceof Patineta) {
+                Patineta x;
+                x = ((Patineta) listaPatinetas);
+                if (x.getModelo() <= 2000) {
+                    System.out.println("Patineta mas Antigua: "+"Marca: " + x.getMarca() + " Modelo: " + x.getModelo() + " Longitud: " + x.getLongitud());
+                }
+                
+            }
+        }
+    }
+
 }
